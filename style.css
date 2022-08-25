@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+.container {
+  padding: 0 15px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  font-size: 13px;
+  border-radius: 23px;
+}
+.card p {
+  color: hsl(0, 0%, 81%);
+}
+.discription h1,
+.discription p {
+  padding: 15px;
+}
+.discription h1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.card:nth-child(1) {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: one;
+  color: white;
+  position: relative;
+}
+
+.card:nth-child(2) {
+  background-color: hsl(217, 19%, 35%);
+  grid-area: two;
+  color: white;
+}
+.card:nth-child(3) {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: four;
+}
+.card:nth-child(4) {
+  background-color: hsl(219, 29%, 14%);
+  color: white;
+  grid-area: five;
+}
+.card:nth-child(5) {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: three;
+}
+.info img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 2px solid rgb(247, 241, 241);
+  margin: 10px;
+  width: 38px;
+}
+.info {
+  display: flex;
+  align-items: center;
+  margin: 5px 20px;
+}
+
+.done h3 {
+  color: hsl(0, 0%, 81%);
+}
+.done p {
+  color: hsl(0, 0%, 81%);
+  opacity: 50%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .boxes {
+    display: grid;
+    grid-template-areas:
+      "one one one one one one one one one one one one" "two two two two two two two two two two two two"
+      "three three three three three three three three three three three three" "four four four four four four four four four four four four"
+      "five five five five five five five five five five five five ";
+    gap: 15px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .boxes {
+    display: grid;
+    grid-template-areas: "one one one one one one two two three three" "four four five five five five five five three three ";
+    gap: 15px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
